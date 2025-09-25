@@ -10,7 +10,7 @@ Requirements
 
 Files
 
-    install_kali_cli.sh — installer script (CLI-only, no desktop)
+    K.T.S.sh — installer script (CLI-only, no desktop)
     README.md — this file
 
 Quick start
@@ -26,7 +26,7 @@ Run:
 
 Code
 
-    ./install_kali_cli.sh
+    ./K.T.S.sh
 
 After completion enter Kali with:
 
