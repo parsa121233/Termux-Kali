@@ -1,6 +1,3 @@
-Kali CLI installer for Termux
-
-A small script to install a command-line only Kali Linux into Termux using proot-distro.
 Requirements
 
     Termux on Android (up-to-date)
@@ -20,7 +17,7 @@ Quick start
 
 Code
 
-chmod +x install_kali_cli.sh
+chmod +x K.T.S.sh
 
 Run:
 
@@ -53,7 +50,6 @@ What the script does
 Troubleshooting
 
     proot-distro reports no "kali" entry:
-        Ensure proot-distro is up to date:
 
 Code
 
@@ -66,21 +62,19 @@ If still missing, install a Kali rootfs manually:
 
 Code
 
-        proot-distro install --override-image /path/to/kalifs.tar.xz kali
+proot-distro install --override-image /path/to/kalifs.tar.xz kali
 
 Architecture mismatch:
 
-    Check architecture:
-
 Code
 
-        uname -m
+    uname -m
 
-        Use a matching Kali rootfs.
-    Insufficient storage:
-        Free up space or use external storage and bind it into the distro.
-    Network or apt timeouts in Kali:
-        Ensure Termux has network access and retry; the script uses noninteractive apt settings.
+    Use a matching Kali rootfs for your CPU (aarch64 vs armhf).
+
+    Insufficient storage: free up space or use external storage and bind it into the distro.
+
+    Network or apt timeouts in Kali: ensure Termux has network access and retry; the script uses noninteractive apt settings.
 
 Verification steps (before running)
 
@@ -115,4 +109,4 @@ Code
 Security & notes
 
     This creates a user-space (rootless) Kali using proot; it is not full virtualization and has limitations.
-    The script intentionally avoids installing GUI packages — it's for terminal-only usage.
+    The script intentionally avoids installing GUI packages — it is for terminal-only usage.
